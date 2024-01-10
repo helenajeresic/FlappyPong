@@ -65,14 +65,15 @@ void OdrediCiglice2(){
 void NacrtajCiglice(){
     rectMode(CORNER);
     stroke(0);
+    strokeWeight(2);
     for(int i = 0; i < ciglice.size(); i++){
         // boje: 0 - crvena, 1 - žuta, 2 - plava, 3 - zelena, 4 - narančasta
         int[] ciglica = ciglice.get(i);
-        if(ciglica[2] == 0) fill(255,0,0);
-        else if(ciglica[2] == 1) fill(255,255,0);
-        else if(ciglica[2] == 2) fill(30,144,255);
-        else if(ciglica[2] == 3) fill(50,205,50);
-        else fill(255,140,0);
+        if(ciglica[2] == 0) fill(100, 149, 237);
+        else if(ciglica[2] == 1) fill(70, 130, 180);
+        else if(ciglica[2] == 2) fill(0, 0, 128);
+        else if(ciglica[2] == 3) fill(25, 25, 112);
+        else fill(135, 206, 250);
         rect(ciglica[0], ciglica[1], ciglaSirina, ciglaDuzina);
     }
 }
@@ -99,19 +100,23 @@ void IspisiVrijeme(int startVrijeme){
     fill(255,140,0);
     textSize(50);
     textAlign(CENTER);
-    text(str((millis()-startVrijeme)/1000), height/2 , 30);
+    text(str((millis()-startVrijeme)/1000), height/2 , 40);
 }
 
 void IspisiUkupniRezultatNakonPrveIgre(){
-  fill(255,140,0);
-    textSize(20);
-    textAlign(CENTER);
-    text("Ukupni bodovi nakon prve igre:" + rezultat, height/2, height-10);
+    fill(255,140,0);
+    textSize(25);
+    textAlign(LEFT);
+    if (rezultat < 0) 
+      rezultat = 0;
+    text("Trenutni bodovi: " + rezultat, 10, 40);
 }
 
 void IspisiUkupniRezultatNakonDrugeIgre(){
-  fill(255,140,0);
-    textSize(20);
-    textAlign(CENTER);
-    text("Ukupni bodovi nakon druge igre:" + rezultat, height/2, height-10);
+    fill(255,140,0); 
+    textSize(25);
+    textAlign(LEFT);
+    if (rezultat < 0) 
+      rezultat = 0;
+    text("Trenutni bodovi: " + rezultat, 10, 40);
 }

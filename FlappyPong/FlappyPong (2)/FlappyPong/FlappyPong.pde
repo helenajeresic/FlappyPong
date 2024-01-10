@@ -21,8 +21,8 @@ import ddf.minim.ugens.*;
 int zaslon = 0;
 
 //dvije instance klase Loptica
-Loptica loptica1 = new Loptica(100,100);
-Loptica loptica2 = new Loptica(100,500);
+Loptica loptica1 = new Loptica(100,100,51,255,51);
+Loptica loptica2 = new Loptica(100,500,51,25,51);
 
 // početna gravitacija
 float gravitacija = 0.3;

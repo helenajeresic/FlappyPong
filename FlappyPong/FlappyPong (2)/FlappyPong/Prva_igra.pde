@@ -8,6 +8,8 @@ void NacrtajPticicu() {
 }
 
 void NacrtajLopticu(Loptica l) {
+    stroke(0);
+    strokeWeight(2);
     fill(l.lopticaBoja);
     ellipse(l.lopticaX, l.lopticaY, l.lopticaVelicina, l.lopticaVelicina);
 }
@@ -181,6 +183,8 @@ void ispisiRezultat(){
     fill(255,140,0);
     textSize(50);
     textAlign(CENTER);
+    if (rezultat < 0) 
+      rezultat = 0;
     text(rezultat, height/2 , 50);
 }
 

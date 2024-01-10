@@ -16,6 +16,8 @@ void pocetniZaslon() {
     
     pjesmica.play();
     
+    cursor();
+    
     NacrtajPticicu();
     NacrtajLopticu(loptica1);
     PrimijeniGravitaciju(loptica1);
@@ -23,6 +25,7 @@ void pocetniZaslon() {
 }
 
 void ZaslonIgre1() {
+    noCursor();
     pjesmica.play();  
     PImage slikaPozadine = loadImage("background.jpg");
     background(slikaPozadine);
@@ -52,6 +55,7 @@ void ZaslonIgre1() {
 }
 
 void ZaslonKrajIgre() {
+    cursor();
     //Da bi pjesmica krenula ispočetka u novoj igri
     pjesmica.pause();
     pjesmica.rewind();   
@@ -87,7 +91,8 @@ void ZaslonKrajIgre() {
 }
 
 void ZaslonIgre2(){
-    PImage slikaPozadine = loadImage("background.jpg");
+    noCursor();
+    PImage slikaPozadine = loadImage("background1.jpg");
     background(slikaPozadine);
     IspisiVrijeme(startVrijeme);
     //samo jednom želimo odrediti boje ciglica    
@@ -118,6 +123,7 @@ void ZaslonIgre2(){
 }
 
 void ZaslonIgre3(){  
+    noCursor();
     PImage slikaPozadine1 = loadImage("background1.jpg");
     background(slikaPozadine1);
     IspisiVrijeme(startVrijeme2);
@@ -153,6 +159,7 @@ void ZaslonIgre3(){
 
 
 void ZaslonInstrukcije(){
+    noCursor();
     background(255);
     fill(46, 204, 113);
     textAlign(CENTER);

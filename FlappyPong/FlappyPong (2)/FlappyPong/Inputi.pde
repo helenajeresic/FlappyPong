@@ -3,7 +3,7 @@
 public void mousePressed() {
     // ako smo na početnom zaslonu ili na zaslonu s instrukcijama, nakon klika prebaci na zaslon za igru 1
     if (zaslon == 0 || zaslon == 3) {
-      loptica1=new Loptica(100,300);      
+      loptica1=new Loptica(100,300,51,255,51);      
       zaslon = 1;
     }
     
@@ -15,8 +15,8 @@ public void mousePressed() {
       
       rezultat = 0;
       zivot = maxZivot;
-      loptica1=new Loptica(100,100);
-      loptica2=new Loptica(100,500);      
+      loptica1=new Loptica(100,100,51,255,51);
+      loptica2=new Loptica(100,500,51,0,51);      
       zadnjeVrijemeDodavanja = 0;
       zidovi.clear();
       zaslon = 1;
@@ -30,7 +30,7 @@ void keyPressed() {
     }
     
     else if( key == 'x' && (zaslon == 1 || zaslon == 4 || zaslon == 5)){
-      loptica1=new Loptica(100,300);      
+      loptica1=new Loptica(100,300,51,255,51);      
       zaslon = 0;
     }
     

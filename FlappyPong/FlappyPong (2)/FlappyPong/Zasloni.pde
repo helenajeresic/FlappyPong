@@ -24,7 +24,9 @@ void pocetniZaslon() {
 
 void ZaslonIgre1() {
     pjesmica.play();  
-    background(110,193,248);
+    PImage slikaPozadine = loadImage("background.jpg");
+    background(slikaPozadine);
+    //background(110,193,248);
     
     NacrtajLopticu(loptica1); 
     PrimijeniGravitaciju(loptica1);

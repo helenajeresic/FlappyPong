@@ -10,7 +10,7 @@ class Loptica {
     lopticaX = x; 
     lopticaY = y; 
     lopticaVelicina = 20;
-    lopticaBoja = color(77,0,75);
+    lopticaBoja = color(51,255,51);
     lopticaBrzinaVert = 0;
     lopticaBrzinaHorizon = 0;
   }

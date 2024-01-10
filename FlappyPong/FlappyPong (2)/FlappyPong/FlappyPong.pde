@@ -45,7 +45,7 @@ float zadnjeVrijemeDodavanja = 0;
 int minUdaljenostZidova = 200;
 int maxUdaljenostZidova = 300;
 int sirinaZida = 80;
-color bojaZidova = color(0,128,0);
+color bojaZidova = color(102,51,0);
 ArrayList<int[]> zidovi = new ArrayList<int[]>();
 
 // zivot i rezultat info
